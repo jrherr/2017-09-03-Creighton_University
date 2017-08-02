@@ -3,18 +3,18 @@ layout: workshop      # DON'T CHANGE THIS.
 root: .               # DON'T CHANGE THIS EITHER.  (THANK YOU.)
 carpentry: "swc"    # what kind of Carpentry (must be either "lc" or "dc" or "swc")
 venue: "Creighton University"        # brief name of host site without address (e.g., "Euphoric State University")
-address: "TBA"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
+address: "2500 California Plaza, Omaha, Nebraska"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
 country: "us"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
-language: "us"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
-latlng: "FIXME"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use http://www.latlong.net/)
-humandate: "August 03-04, 2017"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
+latlng: "(41.264968, -95.944625)"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use http://www.latlong.net/)
+humandate: "Aug 3-4, 2017"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
 humantime: "9:00 am - 4:30 pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
 startdate: 2017-08-03      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2017-08-04        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Joshua R. Herr", "Asli Uyar"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["TBA"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+helper: ["TBD"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 contact: ["joshua.r.herr@gmail.com"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-collaborative_notes:             # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
+collaborative_notes: http://pad.software-carpentry.org/2017-08-03-Creighton_University            # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
@@ -46,11 +46,6 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   scrolling="auto">
 </iframe>
 {% endif %}
-
-<h4>This is the workshop template. Delete these lines and use it to customize your own website.
-If you are running a self-organized workshop or have not put in a workshop request yet, please also fill in 
-<a href="{{site.amy_site}}/submit">this workshop request form</a> to let us know about your workshop
-and our administrator may contact you if we need any extra information.</h4>
 
 <h2 id="general">General Information</h2>
 
@@ -196,7 +191,7 @@ and our administrator may contact you if we need any extra information.</h4>
 
 <!-- DO NOT EDIT SURVEY LINKS -->
 <p><em>Surveys</em></p>
-{% if page.carpentry == "swc" %} 
+{% if page.carpentry == "swc" %}
 <p>Please be sure to complete these surveys before and after the workshop.</p>
 <p><a href="{{ site.swc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
 <p><a href="{{ site.swc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
@@ -252,6 +247,7 @@ and our administrator may contact you if we need any extra information.</h4>
   please preview your site before committing, and make sure to run
   'tools/check' as well.
 -->
+<div>
 <h2 id="syllabus">Syllabus</h2>
 
 {% if page.carpentry == "swc" %}
@@ -263,7 +259,7 @@ and our administrator may contact you if we need any extra information.</h4>
 {% endif %}
 
 <hr/>
-
+</div>
 <!--
   SETUP
 
@@ -274,8 +270,12 @@ and our administrator may contact you if we need any extra information.</h4>
   This is the other place where people frequently make mistakes, so
   please preview your site before committing, and make sure to run
   'tools/check' as well.
+
+<div id="setup">
+<h2>Setup</h2>
 -->
 
+<div id="setup">
 <h2 id="setup">Setup</h2>
 
 <p>
@@ -296,6 +296,10 @@ and our administrator may contact you if we need any extra information.</h4>
   that may be useful on the
   <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
 </p>
+
+</div>
+
+
 
 <div id="shell"> <!-- Start of 'shell' section. -->
   <h3>The Bash Shell</h3>
@@ -514,11 +518,11 @@ and our administrator may contact you if we need any extra information.</h4>
     </div>
   </div>
 </div> <!-- End of 'editor' section. -->
-
+<!--
 <div id="python"> <!-- Start of 'Python' section. Remove the third paragraph if
            the workshop will teach Python using something other than
            the IPython notebook.
-           Details at http://ipython.org/ipython-doc/2/install/install.html#browser-compatibility -->
+           Details at http://ipython.org/ipython-doc/2/install/install.html#browser-compatibility
   <h3>Python</h3>
 
   <p>
@@ -598,14 +602,15 @@ and our administrator may contact you if we need any extra information.</h4>
       </ol>
     </div>
   </div>
-<!--
+
   <p>
   Once you are done installing the software listed above,
   please go to <a href="setup/index.html">this page</a>,
   which has instructions on how to test that everything was installed correctly.
   </p>
+
+</div> <!-- End of 'Python' section.
 -->
-</div> <!-- End of 'Python' section. -->
 
 <div id="r"> <!-- Start of 'R' section. -->
   <h3>R</h3>
@@ -627,9 +632,9 @@ and our administrator may contact you if we need any extra information.</h4>
         from <a href="http://cran.r-project.org/index.html">CRAN</a>.
         Also, please install the
         <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
-        Note that if you have separate user and admin accounts, you should run the 
-        installers as administrator (right-click on .exe file and select "Run as 
-        administrator" instead of double-clicking). Otherwise problems may occur later, 
+        Note that if you have separate user and admin accounts, you should run the
+        installers as administrator (right-click on .exe file and select "Run as
+        administrator" instead of double-clicking). Otherwise problems may occur later,
         for example when installing R packages.
       </p>
     </div>
@@ -657,8 +662,8 @@ and our administrator may contact you if we need any extra information.</h4>
     </div>
   </div>
 </div> <!-- End of 'R' section. -->
-
-<div id="sql"> <!-- Start of 'SQLite' section. -->
+<!--
+<div id="sql"> <!-- Start of 'SQLite' section.
   <h3>SQLite</h3>
 
   <p>
@@ -702,9 +707,9 @@ and our administrator may contact you if we need any extra information.</h4>
   <p><strong>If you installed Anaconda, it also has a copy of SQLite
     <a href="https://github.com/ContinuumIO/anaconda-issues/issues/307">without support to <code>readline</code></a>.
     Instructors will provide a workaround for it if needed.</strong></p>
-</div> <!-- End of 'SQLite' section. -->
+</div> <!-- End of 'SQLite' section.
 
-<div id="openrefine"> <!-- Start of 'OpenRefine' section. -->
+<div id="openrefine"> <!-- Start of 'OpenRefine' section.
   <h3>OpenRefine</h3>
   <p>
     For this lesson you will need <em>OpenRefine</em> and a
@@ -750,7 +755,7 @@ and our administrator may contact you if we need any extra information.</h4>
     </div>
   </div>
 </div> <!-- End of 'OpenRefine' section. -->
-
+-->
 <!--
   Uncomment this section if you are using our virtual machine.
 

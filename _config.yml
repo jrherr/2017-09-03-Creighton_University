@@ -6,10 +6,10 @@
 carpentry: "swc"
 
 # Overall title for pages.
-title: "Creighton University Software Carpentry Workshop - August 3rd-4th, 2017"
+title: "Creighton University"
 
 # Contact email address.
-email: lessons@software-carpentry.org
+email: joshua.r.herr@gmail.com
 
 #------------------------------------------------------------
 # Generic settings (should not need to change).
@@ -38,8 +38,8 @@ training_site: "https://swcarpentry.github.io/instructor-training"
 swc_installer: "https://github.com/swcarpentry/windows-installer/releases/download/v0.3/SWCarpentryInstaller.exe"
 
 # Surveys.
-swc_pre_survey: "https://www.surveymonkey.com/r/swc_pre_workshop_v1?workshop_id="
-swc_post_survey: "https://www.surveymonkey.com/r/swc_post_workshop_v1?workshop_id="
+swc_pre_survey: "https://www.surveymonkey.com/r/swc_pre_workshop_v1?workshop_id=2017-08-03-Creighton"
+swc_post_survey: "https://www.surveymonkey.com/r/swc_post_workshop_v1?workshop_id=2017-08-03-Creighton"
 dc_pre_survey: "https://www.surveymonkey.com/r/dcpostworkshopassessment?workshop_id="
 dc_post_survey: "https://www.surveymonkey.com/r/dcpostworkshopassessment?workshop_id="
 
