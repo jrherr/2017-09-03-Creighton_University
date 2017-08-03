@@ -1,0 +1,4 @@
+total 0
+drwxr-xr-x   3 trane  staff   102B Aug  3 09:50 .
+drwxr-xr-x  33 trane  staff   1.1K Aug  3 09:45 ..
+-rw-r--r--   1 trane  staff     0B Aug  3 09:50 list.txt

@@ -1,0 +1,293 @@
+    1  df -h
+    2  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    3  brew doctor
+    4  brew tap homebrew/science
+    5  sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    6  ls
+    7  exit
+    8  pick_open_reference_otus.py -i ~/Desktop/Microbacteriaceae/OTUs/total.fasta -o ~/Desktop/Microbacteriaceae/OTUs
+    9  pick_open_reference_otus.py -i ~/Desktop/Microbacteriaceae/OTUs/total.fasta -o ~/Desktop/Microbacteriaceae/OTUs/picking
+   10  pick_open_reference_otus.py -i ~/Desktop/Microbacteriaceae/OTUs/total.fasta -o ~/Desktop/Microbacteriaceae/OTUs/picking
+   11  brew install biom
+   12  exit
+   13  cd Desktop/Microbacteriaceae/OTUs/picking/
+   14  ls
+   15  biom add-metadata -i otu_table_mc2_w_tax_no_pynast_failures.biom -m ../micro_map.txt -o new_improved.biom
+   16  biom add-metadata -i otu_table_mc2_w_tax_no_pynast_failures.biom -m ../micro_map.txt -o new_improved.biom
+   17  biom convert -i new_improved.biom -o otu_table_json.biom --table-type="OTU table" --to-json
+   18  ls
+   19  clear
+   20  ls
+   21  head tax.txt 
+   22  biom add-metadata -i otu_table_json1.biom -o table_out.biom --observation-metadata-fp tax.txt 
+   23  head otu_table_json1.biom 
+   24  clear
+   25  ls
+   26  subl tax.txt 
+   27  biom add-metadata -i otu_table_json1.biom -o table_out.biom --observation-metadata-fp tax.txt 
+   28  cat table_out.biom 
+   29  ls
+   30  biom convert -i table_out.biom -o table_json.biom --table-type="OTU Table" --to-json
+   31  cat table_json.biom
+   32  biom add-metadata -i table_out.biom -o table_one_more_time.biom --observation-metadata-fp tax.txt 
+   33  cat table_one_more_time.biom 
+   34  biom convert -i table_one_more_time.biom -o table_one_more_convert.biom --table-type="OTU Table" --to-json
+   35  cat table_one_more_convert.biom 
+   36  mothur
+   37  ls
+   38  cd /
+   39  ;s
+   40  ls
+   41  cd macqiime/
+   42  ls
+   43  brew update
+   44  clear
+   45  marked
+   46  exit
+   47  pick_open_reference_otus.py -i ~/Downloads/BRC1/IMNGS_seqs.fasta -o ~/Downloads/BRC1/picking
+   48  ls
+   49  cd Downloads/
+   50  ls
+   51  cd BRC1/
+   52  ls
+   53  cd picking/
+   54  ls
+   55  ls -lah ../*.fasta && ls -lah *.fna
+   56  head new_refseqs.fna 
+   57  exit
+   58  cd Desktop/sequencing_trends.md 
+   59  cd Desktop
+   60  ls
+   61  cd Sean/
+   62  ls
+   63  mv 16s_Fix twins.fasta
+   64  ls
+   65  pick_open_reference_otus.py 
+   66  pick_open_reference_otus.py -h
+   67  pick_open_reference_otus.py -i twins.fasta -o ~/Desktop/Sean/OTU_picking
+   68  ls
+   69  pick_open_reference_otus.py -i twins.fasta -o ~/Desktop/Sean/OTU_picking
+   70  ls
+   71  ls
+   72  cd OTU_picking/
+   73  ls
+   74  clear
+   75  ls
+   76  core_diversity_analyses.py -h
+   77  biom summarize-table -i otu_table_mc2_w_tax_no_pynast_failures.biom 
+   78  core_diversity_analyses.py -i otu_table_mc2_w_tax_no_pynast_failures.biom -o core_diversity -m ../mapping.txt -e 2150
+   79  core_diversity_analyses.py -i otu_table_mc2_w_tax_no_pynast_failures.biom -o core_diversity -m ../mapping.txt -e 2150 --tree_fp rep_set.tre 
+   80  ls
+   81  cd core_diversity/
+   82  ls
+   83  cd bdiv_even2150/
+   84  ls
+   85  cd ~/Desktop/
+   86  ls
+   87  grep -c ">" lean.fasta 
+   88  grep -c ">" over.fasta 
+   89  head -n 3114 lean.fasta > lean1.fasta
+   90  tail -n 6230 lean.fasta > newlean.fasta
+   91  head -n 3114 newlean.fasta > lean2.fasta
+   92  tail -n 3114 newlean.fasta > lean3.fasta
+   93  ls -lah
+   94  head -n 1586 over.fasta > over1.fasta
+   95  tail -n 3176 over.fasta > newover.fasta
+   96  awk 
+   97  head -n 1586 newover.fasta > over2.fasta
+   98  ls -lah
+   99  exit
+  100  ls
+  101  pick_open_reference_otus.py -h
+  102  pick_open_reference_otus.py -i twins.fasta -o OTU_picking
+  103  ls
+  104  cd OTU_picking/
+  105  ls
+  106  biom
+  107  biom summarize-table -i otu_table_mc2_w_tax_no_pynast_failures.biom 
+  108  core_diversity_analyses.py -h
+  109  core_diversity_analyses.py -i otu_table_mc2_w_tax_no_pynast_failures.biom -o core_diversity -m ../mapping.txt -e 700
+  110  core_diversity_analyses.py -i otu_table_mc2_w_tax_no_pynast_failures.biom -o core_diversity -m ../mapping.txt -e 700 --tree_fp rep_set.tre
+  111  ls
+  112  cd core_diversity/
+  113  ls
+  114  open index.html 
+  115  exit
+  116  ls
+  117  pick_open_reference_otus.py -h
+  118  pick_open_reference_otus.py -r FungiLSU_train_1400bp_8506_mod.fasta -i erin.fasta -o output
+  119  head -n 2 erin.fasta 
+  120  fastaclean
+  121  fastaclean erin.fasta 
+  122  ls
+  123  pick_open_reference_otus.py -r FungiLSU_train_1400bp_8506_mod.fasta -i erin.fasta -o output
+  124  filter_alignment.py -o output/pynast_aligned_seqs -i output/pynast_aligned_seqs/rep_set_aligned.fasta
+  125  ls
+  126  rm -rf output/
+  127  ls
+  128  filter_alignment.py -o output/pynast_aligned_seqs -i output/pynast_aligned_seqs/rep_set_aligned.fasta --suppress_align_and_tree
+  129  pick_open_reference_otus.py -r FungiLSU_train_1400bp_8506_mod.fasta -i erin.fasta -o output --suppress_align_and_tree
+  130  ls
+  131  cd outpus
+  132  cd output
+  133  ls
+  134  core_diversity_analyses.py 
+  135  core_diversity_analyses.py -i otu_table_mc2_w_tax.biom -o core_diversity -e 500 --nonphylogenetic_diversity
+  136  core_diversity_analyses.py -i otu_table_mc2_w_tax.biom -o core_diversity -e 500 --nonphylogenetic_diversity --mapping_fp ../mapping_file.txt 
+  137  core_diversity_analyses.py -i otu_table_mc2_w_tax.biom -o core_diversity -e 500 --nonphylogenetic_diversity --mapping_fp ../mapping_file.txt 
+  138  ls
+  139  cd core_diversity/
+  140  ls
+  141  cd ..
+  142  ls
+  143  rm -rf core_diversity/
+  144  ls
+  145  core_diversity_analyses.py -i otu_table_mc2_w_tax.biom -o core_diversity -e 500 --nonphylogenetic_diversity --mapping_fp ../mapping_file.txt 
+  146  core_diversity_analyses.py -i otu_table_mc2_w_tax.biom -o core_diversity -e 400 --nonphylogenetic_diversity --mapping_fp ../mapping_file.txt 
+  147  rm -rf core_diversity/
+  148  core_diversity_analyses.py -i otu_table_mc2_w_tax.biom -o core_diversity -e 400 --nonphylogenetic_diversity --mapping_fp ../mapping_file.txt 
+  149  filter_samples_from_otu_table.py -h
+  150  filter_samples_from_otu_table.py -i otu_table_mc2_w_tax.biom -o output.biom
+  151  core_diversity_analyses.py -i otu_table_mc2_w_tax.biom -o core_diversity -e 400 --nonphylogenetic_diversity --mapping_fp ../mapping_file.txt 
+  152  rm -rf core_diversity/
+  153  ls
+  154  core_diversity_analyses.py -i otu_table_mc2_w_tax.biom -o core_diversity -e 400 --nonphylogenetic_diversity --mapping_fp ../mapping_file.txt
+  155  rm -rf core_diversity/
+  156  core_diversity_analyses.py -i otu_table_mc2_w_tax.biom -o core_diversity -e 400 --nonphylogenetic_diversity
+  157  core_diversity_analyses.py -i otu_table_mc2_w_tax.biom -o core_diversity -e 400 --nonphylogenetic_diversity --mapping_fp ../mapping_file.txt
+  158  rm -rf core_diversity/
+  159  core_diversity_analyses.py -i otu_table_mc2_w_tax.biom -o core_diversity -e 400 --nonphylogenetic_diversity --mapping_fp ../mapping_file.txt
+  160  core_diversity_analyses.py -i otu_table_mc2_w_tax.biom -o core_diversity --nonphylogenetic_diversity --mapping_fp ../mapping_file.txt
+  161  biom
+  162  biom summarize_table -i otu_table_mc2_w_tax.biom 
+  163  core_diversity_analyses.py -i otu_table_mc2_w_tax.biom -o core_diversity --nonphylogenetic_diversity --mapping_fp ../mapping_file.txt -e 1
+  164  rm -rf core_diversity/
+  165  core_diversity_analyses.py -i otu_table_mc2_w_tax.biom -o core_diversity --nonphylogenetic_diversity --mapping_fp ../mapping_file.txt -e 1
+  166  pick_open_reference_otus.py 
+  167  cd ..
+  168  ls
+  169  rm output
+  170  rm -rf output
+  171  ls
+  172  pick_open_reference_otus.py -r FungiLSU_train_1400bp_8506_mod.fasta -i erin.fasta -o output --suppress_align_and_tree
+  173  ls
+  174  cd output
+  175  ls
+  176  biom
+  177  biom summarize-table -i otu_table_mc2_w_tax.biom 
+  178  core_diversity_analyses.py -i otu_table_mc2_w_tax.biom -o core_diversity --nonphylogenetic_diversity --mapping_fp ../mapping_file.txt
+  179  core_diversity_analyses.py -i otu_table_mc2_w_tax.biom -o core_diversity --nonphylogenetic_diversity --mapping_fp ../mapping_file.txt --sampling_depth 6
+  180  ls
+  181  cd core_diversity/
+  182  ls
+  183  cd arare_max6/
+  184  ls
+  185  cd alpha_rarefaction_plots/
+  186  ls
+  187  cd ..
+  188  ls
+  189  cd ..
+  190  ls
+  191  cd bdiv_even6/
+  192  ls
+  193  cd bray_curtis_emperor_pcoa_plot/
+  194  ls
+  195  open index.html 
+  196  ls
+  197  cd ..
+  198  ls
+  199  cd ..
+  200  lks
+  201  ls
+  202  cd ..
+  203  ;ls
+  204  ls
+  205  summarize_taxa_through_plots.py -i otu_table_mc2_w_tax.biom -o summarize
+  206  cd summarize/
+  207  ls
+  208  cd taxa
+  209  ls
+  210  cd taxa_summary_plots/
+  211  ls
+  212  open bar_charts.html 
+  213  ls
+  214  cd ..
+  215  ls
+  216  cd ..
+  217  ls
+  218  cd ..
+  219  ls
+  220  subl mapping_file.txt 
+  221  clkear
+  222  clear
+  223  exit
+  224  clear
+  225  ls
+  226  cd ~
+  227  ls
+  228  cd -
+  229  ls
+  230  clear
+  231  ls
+  232  ls -lah
+  233  ls -lah > list.txt
+  234  ls
+  235  cat list.txt
+  236  clear
+  237  ls -lah
+  238  cd ..
+  239  ls
+  240  cd TEMP/
+  241  cd ..
+  242  ls
+  243  cd ../..
+  244  ls
+  245  cd github/
+  246  ls
+  247  clear
+  248  ls
+  249  cd 2017-09-03-Creighton_University/
+  250  cd TEMP/
+  251  ls
+  252  clear
+  253  mkdir new_folder
+  254  ls
+  255  cd new_folder/
+  256  ls
+  257  cd ..
+  258  ls
+  259  cd ..
+  260  ls
+  261  pwd
+  262  cd /Users/trane/github/2017-09-03-Creighton_University/TEMP
+  263  cd ..
+  264  cd ./TEMP/
+  265  cd /
+  266  ls
+  267  cd -
+  268  clear
+  269  ls
+  270  cd new_folder/
+  271  cd ~
+  272  ls
+  273  pwd
+  274  cd -
+  275  whoami
+  276  cd ~
+  277  pwd
+  278  clear
+  279  ls
+  280  cd -
+  281  ls -lah
+  282  clear
+  283  ls
+  284  mkdir temp1
+  285  mkdir temp2
+  286  ls
+  287  cd ~
+  288  cd -
+  289  ls
+  290  history
+  291  history > history.txt
+
+  here is the tail
