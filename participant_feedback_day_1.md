@@ -1,4 +1,6 @@
-## Feedback after teaching on day one of workshop
+## Feedback after teaching
+
+## Day One
 
 **green stickies**
 "I was learning for the entire morning session"
@@ -57,3 +59,7 @@
 "The woman could have used a microphone"
 "I want to learn more loops and functions in R"
 "I want to learn data visualization"
+
+## Day Two
+**green stickies**
+**red stickies**
