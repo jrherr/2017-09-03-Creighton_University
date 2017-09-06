@@ -62,4 +62,10 @@
 
 ## Day Two
 **green stickies**
+Thank you very much. I learned a lot!!
+Applied work and functional focus is key!
+Please offer a custom R event to include advanced analytics
+
 **red stickies**
+Thank you!
+Relatively slow rehash of material
